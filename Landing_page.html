@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mely Platform</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      --brand-main: #0d9488;
+      --brand-accent: #14b8a6;
+      --bg-dark: #0f172a;
+      --text-dark: #1e293b;
+      --bg-light: #f1f5f9;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: var(--bg-light);
+      color: var(--text-dark);
+    }
+
+    .wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .intro-section {
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(145deg, rgba(20, 184, 166, 0.1), white);
+    }
+
+    .feature-wrap {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .card-box {
+      background: white;
+      padding: 2rem;
+      border-radius: 0.75rem;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease;
+    }
+
+    .card-box:hover {
+      transform: translateY(-5px);
+    }
+
+    .circle-icon {
+      width: 60px;
+      height: 60px;
+      background-color: rgba(13, 148, 136, 0.1);
+      border-radius: 9999px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1rem;
+    }
+
+    .stats-block {
+      background: #e2e8f0;
+    }
+
+    .highlight-cta {
+      background: linear-gradient(to right, var(--brand-main), var(--brand-accent));
+      color: white;
+      text-align: center;
+      padding: 4rem 0;
+    }
+
+    .btn-cta {
+      background: white;
+      color: var(--brand-main);
+      padding: 0.75rem 2rem;
+      font-weight: 600;
+      border-radius: 0.5rem;
+      transition: all 0.3s ease;
+      display: inline-block;
+      margin-top: 1.5rem;
+    }
+
+    .btn-cta:hover {
+      transform: scale(1.05);
+    }
+
+    footer {
+      background: var(--bg-dark);
+      color: white;
+      padding: 3rem 0;
+    }
+
+    .footer-columns {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+    }
+
+    .footer-columns h4 {
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+
+    .footer-columns a {
+      color: #cbd5e1;
+      display: block;
+      margin-bottom: 0.5rem;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .footer-columns a:hover {
+      color: white;
+    }
+
+    .fadeIn {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeIn 0.8s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <nav class="bg-white shadow-sm py-4">
+    <div class="wrapper flex justify-between items-center">
+      <div class="text-2xl font-bold text-teal-600">Mely</div>
+      <div class="hidden md:flex gap-6">
+        <a href="#tools" class="text-gray-700 hover:text-teal-600">Solutions</a>
+        <a href="#value" class="text-gray-700 hover:text-teal-600">Benefits</a>
+        <a href="#team" class="text-gray-700 hover:text-teal-600">Team</a>
+        <a href="#connect" class="text-gray-700 hover:text-teal-600">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="intro-section">
+    <div class="wrapper grid md:grid-cols-2 items-center gap-10 py-16">
+      <div>
+        <h1 class="text-4xl md:text-5xl font-bold mb-6 fadeIn">Empower Your Business with Mely</h1>
+        <p class="text-lg text-gray-600 mb-6 fadeIn" style="animation-delay: 0.2s;">A fast, secure, and scalable platform to launch and grow your online venture.</p>
+        <div class="flex gap-4">
+          <a href="#" class="bg-teal-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-teal-700">Launch Now</a>
+          <a href="#" class="border border-gray-300 text-gray-700 px-6 py-3 rounded-lg font-medium hover:bg-gray-50">Discover More</a>
+        </div>
+      </div>
+      <div class="fadeIn" style="animation-delay: 0.4s;">
+        <img src="C:\Users\Anil Tiwari\Desktop\AMITY ASSIGNMENT\abc.jpg" alt="Analytics Image" class="rounded-xl shadow-lg"/>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="tools" class="py-20 bg-white">
+    <div class="wrapper text-center">
+      <h2 class="text-3xl font-bold mb-4">Explore Our Capabilities</h2>
+      <p class="text-gray-600 max-w-2xl mx-auto mb-12">Built with top-tier technologies to support your growth at every step.</p>
+      <div class="feature-wrap">
+        <div class="card-box fadeIn">
+          <div class="circle-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Fast Deployment</h3>
+          <p class="text-gray-600">Get your solution live in record time with optimized deployment processes.</p>
+        </div>
+        <div class="card-box fadeIn" style="animation-delay: 0.2s;">
+          <div class="circle-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-10 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Cloud First</h3>
+          <p class="text-gray-600">Our fully managed cloud stack ensures reliability and performance.</p>
+        </div>
+        <div class="card-box fadeIn" style="animation-delay: 0.3s;">
+          <div class="circle-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Secure Framework</h3>
+          <p class="text-gray-600">Built-in security architecture ensures data integrity across all operations.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="stats-block py-16">
+    <div class="wrapper grid grid-cols-2 md:grid-cols-4 gap-10 text-center">
+      <div class="fadeIn">
+        <div class="text-4xl font-bold text-teal-600">8,500+</div>
+        <p class="text-gray-600">Clients Served</p>
+      </div>
+      <div class="fadeIn" style="animation-delay: 0.1s;">
+        <div class="text-4xl font-bold text-teal-600">100%</div>
+        <p class="text-gray-600">Uptime Guaranteed</p>
+      </div>
+      <div class="fadeIn" style="animation-delay: 0.2s;">
+        <div class="text-4xl font-bold text-teal-600">365</div>
+        <p class="text-gray-600">Days Support</p>
+      </div>
+      <div class="fadeIn" style="animation-delay: 0.3s;">
+        <div class="text-4xl font-bold text-teal-600">70+</div>
+        <p class="text-gray-600">Regions Covered</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="highlight-cta">
+    <div class="wrapper">
+      <h2 class="text-3xl font-bold mb-4">Let’s Build Something Great Together</h2>
+      <p class="opacity-90 max-w-xl mx-auto">Sign up now and be part of the future-ready teams using Mely to scale effortlessly.</p>
+      <a href="#" class="btn-cta">Claim Free Access</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="wrapper">
+      <div class="footer-columns">
+        <div>
+          <h4>Solutions</h4>
+          <a href="#">Overview</a>
+          <a href="#">Use Cases</a>
+          <a href="#">Pricing</a>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <a href="#">Team</a>
+          <a href="#">Blog</a>
+          <a href="#">Careers</a>
+        </div>
+        <div>
+          <h4>Resources</h4>
+          <a href="#">Docs</a>
+          <a href="#">FAQs</a>
+          <a href="#">Status</a>
+        </div>
+        <div>
+          <h4>Legal</h4>
+          <a href="#">Terms</a>
+          <a href="#">Privacy</a>
+          <a href="#">Cookies</a>
+        </div>
+      </div>
+      <div class="text-center text-sm text-slate-400 mt-10">© 2025 Mely Inc. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const elements = document.querySelectorAll('.fadeIn');
+      elements.forEach(el => {
+        el.style.animationDelay = el.getAttribute('style')?.match(/animation-delay:\s*(.*);/)?.[1] ?? '0s';
+      });
+    });
+  </script>
+
+</body>
+</html>
